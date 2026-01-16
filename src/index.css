@@ -1,8 +1,2 @@
 @import "tailwindcss";
 
-/* Ensure body fills the viewport and uses gray background */
-html, body {
-  margin: 0;
-  padding: 0;
-  background: gray;
-}
