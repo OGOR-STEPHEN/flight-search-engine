@@ -49,11 +49,14 @@ export default function PriceGraph({ flights }: PriceGraphProps) {
 
           <YAxis
             tick={{ fill: "#6b7280", fontSize: 12 }}
-            tickFormatter={(value) => `$${value}`}
+            tickFormatter={(value: number) => `$${value.toLocaleString()}`}
           />
 
           <Tooltip
-            formatter={(value: number) => [`$${value.toLocaleString()}`, "Price"]}
+            formatter={(value) => {
+              if (typeof value !== "number") return ["—", "Price"];
+              return [`$${value.toLocaleString()}`, "Price"];
+            }}
             labelStyle={{ color: "#374151" }}
           />
 

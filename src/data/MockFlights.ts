@@ -1,5 +1,5 @@
 // src/data/MockFlights.ts
-// import type { Flight } from "../types/Flight";
+import type { Flight } from "../types/flight";
 
 export const MOCK_FLIGHTS: Record<string, Flight[]> = {
   "LAX-PAR": [
